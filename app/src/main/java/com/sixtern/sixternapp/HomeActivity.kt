@@ -1,14 +1,19 @@
 package com.sixtern.sixternapp
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import com.sixtern.sixternapp.ui.main.MainScreen
+import com.sixtern.sixternapp.ui.theme.SIXTERNAPPTheme
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
 
-        // Sembunyikan action bar jika muncul di atas
-        supportActionBar?.hide()
+        setContent {
+            SIXTERNAPPTheme {
+                MainScreen()
+            }
+        }
     }
 }
