@@ -27,6 +27,9 @@
             android:name=".HomeActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".kaprodi.KaprodiActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -26,6 +26,9 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import android.content.Intent
+import androidx.compose.ui.platform.LocalContext
+import com.sixtern.sixternapp.kaprodi.KaprodiActivity
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -43,6 +46,7 @@ fun LoginKaprodiScreen(
     var expanded by remember { mutableStateOf(false) }
     val prodiList = listOf("S1 Teknologi Informasi", "S1 Ilmu Komputer")
     var selectedProdi by remember { mutableStateOf(prodiList[0]) }
+    val context = LocalContext.current
 
     Column(
         modifier = Modifier
@@ -237,7 +241,9 @@ fun LoginKaprodiScreen(
 
                 // Tombol Masuk Kaprodi
                 Button(
-                    onClick = { onLoginSuccess() },
+                    onClick = {
+                        context.startActivity(Intent(context, KaprodiActivity::class.java))
+                    },
                     modifier = Modifier.fillMaxWidth().height(48.dp),
                     shape = RoundedCornerShape(12.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1E3A8A))
