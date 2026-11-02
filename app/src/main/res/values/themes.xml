@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Theme untuk MainActivity (Splash Screen) -->
+    <style name="Theme.SIXTERNAPP" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
 
-    <style name="Theme.SIXTERNAPP" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Theme untuk Compose Activity -->
+    <style name="Theme.SIXTERNAPP.Compose" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
 </resources>
